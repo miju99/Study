@@ -23,13 +23,17 @@ Edit 메뉴 -> Project Settings -> Player -> Splash Image
 </details>
 
 * __Animation__ : Unity 로고의 애니메이션 효과를 설정. Static & Dolly & Custom 선택
+    * Custom - Logo Zoom (0-1), Background Zoom (0-1) 조절 가능
 <details>
   <summary>사진</summary>
 [Dolly](https://github.com/user-attachments/assets/204f4c24-5e73-40da-b2f8-1c527b902f7f) <br>
 [Custom-Logo Zoom:1, Background Zoom:1](https://github.com/user-attachments/assets/7209d55c-406f-42e1-8f69-5523ff6db382)
 </details>
 
-Preview를 누르면 미리 볼 수 있음.
+* __Show Unity Logo__ : Unity 로고 표시 여부 설정 (무료 버전은 불가능)
+* __Draw Mode__ : 로고를 어떻게 보여줄 지 설정. Unity Logo Below & All Sequential 선택
+  
+
 
 원하는 이미지 속성
 Mesh Type -> Full Rect를 Full Rect로 변경 후 Apply
