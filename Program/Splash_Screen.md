@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/f9750c4a-15ba-4555-a87a-b147aa5e80e2
 # 스플래시 화면
 #### 앱 런칭 시 브랜드 이미지를 처음으로 보여주는 화면 (앱의 신뢰성 및 회사의 브랜딩을 높이기 위해 사용)
 <details>
@@ -9,7 +11,7 @@
 Edit 메뉴 -> Project Settings -> Player -> Splash Image
 <details>
   <summary>사진</summary>
-[화면](https://github.com/user-attachments/assets/0fe02520-fac4-4d20-bc37-35f149ee2b80)
+[화면](https://github.com/user-attachments/assets/bbefa1aa-6e5a-474c-b70e-0c1bcb7d6dba)
 </details>
 
 ### 기본 기능
@@ -26,13 +28,19 @@ Edit 메뉴 -> Project Settings -> Player -> Splash Image
     * Custom - Logo Zoom (0-1), Background Zoom (0-1) 조절 가능
 <details>
   <summary>사진</summary>
-[Dolly](https://github.com/user-attachments/assets/204f4c24-5e73-40da-b2f8-1c527b902f7f) <br>
-[Custom-Logo Zoom:1, Background Zoom:1](https://github.com/user-attachments/assets/7209d55c-406f-42e1-8f69-5523ff6db382)
+[Dolly](https://github.com/user-attachments/assets/1c2a8f99-0cab-49b4-b508-f86d1de485c3) <br>
+[Custom-Logo Zoom:1, Background Zoom:1](https://github.com/user-attachments/assets/3657b734-2df7-483b-b23a-1b9cb81b3afa)
 </details>
 
 * __Show Unity Logo__ : Unity 로고 표시 여부 설정 (무료 버전은 불가능)
 * __Draw Mode__ : 로고를 어떻게 보여줄 지 설정. Unity Logo Below & All Sequential 선택
-  
+<details>
+  <summary>사진</summary>
+  [Unity Logo Below](https://github.com/user-attachments/assets/015ed91b-6f53-4610-b215-ed7f57465095)
+  [All Sequential](https://github.com/user-attachments/assets/cd55d7fe-b367-4593-8493-b8bcd9e39323)
+
+  </details>
+
 
 
 원하는 이미지 속성
