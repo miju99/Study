@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/f9750c4a-15ba-4555-a87a-b147aa5e80e2
 # 스플래시 화면
 #### 앱 런칭 시 브랜드 이미지를 처음으로 보여주는 화면 (앱의 신뢰성 및 회사의 브랜딩을 높이기 위해 사용)
 <details>
@@ -34,18 +32,39 @@ Edit 메뉴 -> Project Settings -> Player -> Splash Image
 
 * __Show Unity Logo__ : Unity 로고 표시 여부 설정 (무료 버전은 불가능)
 * __Draw Mode__ : 로고를 어떻게 보여줄 지 설정. Unity Logo Below & All Sequential 선택
+    * 각 로고마다 Logo Duration (2-10) 조절 가능
+    * 2개의 로고를 각 2초로 설정하면 총 4초 + 0.5초(Fade Out)이 소요된다.
 <details>
   <summary>사진</summary>
-  [Unity Logo Below](https://github.com/user-attachments/assets/015ed91b-6f53-4610-b215-ed7f57465095)
+  [Unity Logo Below](https://github.com/user-attachments/assets/015ed91b-6f53-4610-b215-ed7f57465095) <br>
   [All Sequential](https://github.com/user-attachments/assets/cd55d7fe-b367-4593-8493-b8bcd9e39323)
-
   </details>
 
+### Background 기능
+* __Overlay Opacity__ : 배경의 투명도 (0.5-1) 조절 가능
+* __Background Color__ : 백그라운드 컬러 변경. 백그라운드 이미지 설정이 None인 경우 설정 가능.
+* __Blur Background Image__ : 배경에 블러효과를 줄 수 있음.
+* __Background Image__ : 이미지 설정 시 배경 이미지 출력
+<details>
+  <summary>사진</summary>
+[Background Image](https://github.com/user-attachments/assets/99ca5fd6-637c-4c44-ac72-bce321b38435)
+  </details>
+  
+* __Alternate Portrait Image__ : 세로 화면일 때 나올 배경 이미지 설정
+<details>
+  <summary>사진</summary>
+  [Alternate Portrait Iamge](https://github.com/user-attachments/assets/163d1589-68a2-4381-b10b-8dd249bb47fb) <br>
+  * Background Image 가 있어도 현재 화면 사이즈가 세로이기 때문에 Alternate Portrait Image가 출력
+    </details>
 
+* __Static Splash Image__
+  * Scaling - Center(Only Scale down) & Scale to fit(letter-boxed) & Scale to fill(cropped) 선택
+      * Center (only Scale down) : 원래 크기대로 이미지 사용. 너무 큰 경우 화면에 맞게 이미지 축소
+      * Scale to fit (letter-boxed) : 이미지의 가로 또는 세로 중 비율상 더 긴 쪽을 화면 크기에 맞춰 사용. 짧은 쪽 주변의 남는 공간은 검은색으로 채워진다.
+      * Scale to fill (cropped) : 이미지의 가로 또는 세로 중 비율 상 더 짧은 쪽을 화면 크기에 맞춰 사용. 화면에 맞지 않은 긴 쪽은 잘린다.
 
-원하는 이미지 속성
-Mesh Type -> Full Rect를 Full Rect로 변경 후 Apply
-
-Splash Image 창에서 Draw Mode -> Unity Logo Below에서 All Sequential로 변경 (유니티 로고가 뜬 후 세팅한 이미지가 뜨게 됨)
-+버튼 눌러서 None의 Select 버튼 클릭 -> 원하는 이미지 선택(더블클릭) -> 저장
-Animation에 Dolly를 Static으로 세팅 -> 저장
+### 추가
+* Splash로 사용할 이미지의 Inspector창에서 Mesh Type을 변경해주어야 한다.
+* Mesh Type -> Tight를 Full Rect로 변경 후 Apply
+  * Tighr : 스프라이트의 투명 영역을 제외하고, RGBA를 기반으로 일정 영역을 렌더링 (빈 영역은 무시하고 스프라이트의 윤곽을 따라감)
+  * Full Rect : 이미지의 크기와 동일한 형태로 스프라이트를 렌더링
