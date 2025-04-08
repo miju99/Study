@@ -21,8 +21,13 @@ Edit 메뉴 -> Project Settings -> Player -> Splash Image
 [Light On Dark](https://github.com/user-attachments/assets/3b6fe399-5bc7-4a2f-9692-d9653d41bacd) <br>
 [Dark On Light](https://github.com/user-attachments/assets/7c4fbbd5-32b8-4a5e-a1a6-23dbd6188336)
 </details>
-* Animation : Unity 로고의 애니메이션 효과를 설정. Static & Dolly & Custom 선택
 
+* __Animation__ : Unity 로고의 애니메이션 효과를 설정. Static & Dolly & Custom 선택
+<details>
+  <summary>사진</summary>
+[Dolly](https://github.com/user-attachments/assets/204f4c24-5e73-40da-b2f8-1c527b902f7f) <br>
+[Custom-Logo Zoom:1, Background Zoom:1](https://github.com/user-attachments/assets/7209d55c-406f-42e1-8f69-5523ff6db382)
+</details>
 
 Preview를 누르면 미리 볼 수 있음.
 
