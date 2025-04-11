@@ -1,0 +1,165 @@
+# Unity_Camp
+내일배움캠프 Unity 10기
+
+### 25.04.07(월)
+<details>
+  <summary>Click!</summary>
+  
+1. 오늘의 학습 주제 : **카드 뒤집기 게임 복습**
+   
+2. 새로 알게된 내용 : 2장의 카드 내용이 일치하는지 확인하는 로직
+   
+       1. 1번 카드와 2번 카드의 이미지 이름을 받는다.
+       2. 일치하면 파괴
+       3. 일치하지 않으면 다시 뒤집는다.
+       => 내일 싱글톤 공부하고 정리하면서 다시 기재 예정
+   
+3. 궁금한 점/ 더 알아볼 점 :
+   
+       1. GameManager를 다른 곳에서 부를 때 싱글톤화를 하는 이유
+       2. 1번 카드와 2번카드를 뒤집을 때, 왜 if(GameManager.Instance.firstCard == null){GameManger.Instance.firstCard == this;} 라는 코드가 되는지
+       ∴ 싱글톤에 대해 공부하기
+
+4. 내일 학습 계획 : 5주차 강의 듣기, **싱글톤 공부**
+   
+</details>
+
+### 25.04.08(화)
+<details>
+  <summary>Click!</summary>
+  
+1. 오늘의 학습 주제 : 5주차 강의, 팀 프로젝트(카드 뒤집기 심화)<br>
+    * 5주차 강의 내용
+        1. 시작씬 만들기
+           + 르탄이 이미지 애니메이션 반복, StartButton 만들고 MainScene으로 이동하는 함수 구현
+        2. 소리 & 배경음악 넣기
+           + 카드를 뒤집을때와 카드를 맞췄을 때 효과음을 넣고, StartScene과 MainScene에서 BGM 나오게 설정
+           + 다시 생각해봤던 포인트
+             
+                 MainScene에 먼저 Audio Source를 추가하고 Audio Manager를 붙인 후 동일하게 StartScene에도 했더니
+                 StartScene에서 MainScene으로 넘어올 때 사운드가 겹쳐 들림.
+             
+                 처음에는 MainScene의 Audio를 빼면 되지 않을까? 싶었는데
+                 생각해보니 게임이 끝나고 RetryButton을 누르면 StartScene으로 가지않고 바로 게임이 시작되기 때문에
+             
+                 MainScene의 Audio를 삭제하지 않고, AudioManger를 싱글톤화 시켜
+                 AUdioManager가 겹치는 경우 싱글톤을 제외하고 파괴해주는 것이었다.
+   
+2. 새로 알게된 내용 : 스플래시 이미지 만들기, 광고 붙이기, 배포 <br>
+  * 스플래시 이미지 - 앱을 켰을 때 떴다가 사라지는 이미지 (유니티 무료 버전에서는 유니티 로고도 함께 노출됨)
+       * Edit -> Project Settings -> player -> Splash Image에서 설정할 수 있다.
+              <details>
+                <summary>[링크]</summary>
+                        [스플래시 정리] https://github.com/miju99/Study/blob/main/Program/Splash_Screen.md
+                </details>
+  
+  * 광고 붙이기
+       * adsManager(Empty)에 adsManager.cs 붙이고 AdInitialize.cs코드와 RewardedButton.vs 붙여주기. (iOS & Andriod 아이디 입력)
+              <details>
+                <summary>[링크]</summary>
+                       [광고 정리] https://github.com/miju99/Study/blob/main/Program/Ads.md
+                  </details>
+    
+  * 배포
+       * File -> Build Settings -> Scene 추가 후 Switch Platform -> 화면 사이즈 재설정 -> Build.<br>
+       자세한 내용은 따로 작성 후 링크 추가 예정
+
+3. 추가로 공부해야 할 것 :
+   * 팀프로젝트를 진행하게 되어서 5주차 강의만 공부하고 싱글톤 공부를 못했다. <br>
+   * 오늘은 깃허브 데스크탑에 대해 더 공부하고 내일 개인 시간에 싱글톤에 대해 공부하고 정리하는 시간을 가져야겠다.
+
+4. 내일 학습 계획 : **싱글톤 공부**, 팀프로젝트 와이어프레임 제작, 파트 분담
+   
+</details>
+
+### 25.04.09(수)
+<details>
+  <summary>Click!</summary>
+1. 오늘의 학습 주제 : 팀원들과 팀프로젝트 진행 (르탄 카드 뒤집기 게임)
+  
+  ### 카드 뒤집는 애니메이션
+CardFlip 애니메이션에 Add Property -> transform -> Card : Rotation에서 y값을 180
+
+#### 카드 이미지 변경
+    public void Setting(int number)
+    {
+        idx = (number+1).ToString();
+        frontImage.sprite = Resources.Load<Sprite>(idx);
+    }
+
+__Event System Inspector__
+> * Transform
+> * Eveny System
+> * Standalone Input Module <- 있는지 잘 보기
+
+__Object Material__
+> 분홍색인 경우 오류 난 것
+
+  </details>
+
+### 25.04.10(목)
+<details>
+  <summary>Click!</summary>
+<br>
+< 팀프로젝트 상호작용 분석하기 >
+	
+#### 선택한 게임의 이름은 무엇인가요?
+> 살아남아라 무도가
+
+#### 선택한 게임의 장르는 무엇인가요?
+> 격투/액션/캐주얼/액션 로그라이크
+
+#### 선택한 게임의 어떤 시스템에 집중하셨나요?
+> 근접 무기를 습득 후 공격 시스템
+
+#### 해당 시스템이 동작하는 구조의 시작부터 과정을 최대한 자세하게 분석, 나열해봅시다.
+각목 근접 무기 시스템
+> 1. 캐릭터가 무기를 획득했는지 확인
+> 	무기 충돌 판정 바운더리 내 캐릭터가 들어와야 자동 습득
+> 2. 무기 애니메이션 실행
+> 3. 사거리 내 적중 가능한 타겟 검색
+> 	적의 충돌 범위와 무기 충돌 범위 비교 후 처리
+> 4. 타겟이 적인지 아닌지 구분
+	적이 아니라면 애니메이션은 실행되지만 공격X, 횟수 차감 무효
+> 5. 타겟의 수가 각목 공격의 최대 관통수를 초과하는 지 확인
+> 
+> 6. 공격이 적중한 적마다:
+> 	주변 물체 데미지 스탯과 치명타 확률/피해에 따라 데미지 파악
+> 	- 실패 시 횟수 차감x
+> 	데미지 계산
+> 	- ?
+> 7. 각목 무기 획득 후 다른 무기 바운더리에 접촉 시
+> 	  원거리 투척 아이템) 먼저 사용
+> 	  근접 무기) 사용중인 무기가 파괴되기 전까지 무시
+>
+
+#### 직접 분석해본 내용 중 가장 핵심이 되는 구성 요소는 무엇이라 생각하나요?
+> (횟수 제한이 있는)무기 자동 습득 및 공격, 캐릭터 공격 불가 처리
+
+1. 오늘의 학습 주제 : 팀프로젝트
+  
+  ### bestStage 정수형 변수를 만들어 최고 스테이지 정보 저장하기
+>  설명 ) '시작하기' 버튼을 누르면 플레이했던 최고 레벨부터 시작되게 하기 위함.
+  
+    int stage = int.Parse(stageTxt.text);
+    if (PlayerPrefs.HasKey(BS))
+    {
+        int stageBest = PlayerPrefs.GetInt(BS);
+    
+        if(stage > stageBest)
+        {
+            PlayerPrefs.SetInt(BS, stage);
+        }
+        else
+        {
+            stage = stageBest;
+        }
+    }
+    else { PlayerPrefs.SetInt(BS, stage); }
+
+#### 게임 클리어 시 EndScene으로 전환
+
+    SceneManager.LoadScene("EndingScene");
+  + EndScene (실패시/클리어시)
+
+  </details>
