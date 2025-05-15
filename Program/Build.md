@@ -30,6 +30,7 @@
     
 <details>
   <summary>[사진]</summary>
+   
   [Player](https://github.com/user-attachments/assets/6ce4f0bb-18a4-4275-b547-dd2828bab61c)
 </details>
 
@@ -38,6 +39,7 @@
 
 <details>
   <summary>[사진]</summary>
+   
   [Player](https://github.com/user-attachments/assets/a0806797-7600-4e75-b438-26fa394dce86)
 </details>
    
@@ -47,6 +49,7 @@
 
 <details>
   <summary>[사진]</summary>
+   
   [Resolution and Presentation](https://github.com/user-attachments/assets/2da14814-02b6-4e45-8b58-88222f9a87f5)
 </details>
 
